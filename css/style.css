@@ -1,0 +1,45 @@
+body {
+  padding: 0;
+  margin: 0;
+
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  color: #202020;
+}
+
+#content {
+  width: 800px;
+  margin: auto;
+  padding: 0 5px;
+}
+
+#posts date {
+  float: right;
+  color: grey;
+}
+
+#posts a {
+  color: #202020;
+  text-decoration: none;
+}
+
+#posts ul {
+  padding: 0;
+  list-style: none;
+}
+
+
+#logo {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 20px 0 50px 0;
+}
+
+#logo a {
+  display: block;
+  color: #202020;
+  text-decoration: none;
+}
+
+#logo-about {
+  font-size: 0.4em;
+}
