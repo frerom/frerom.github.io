@@ -6,40 +6,73 @@ body {
   color: #202020;
 }
 
-#content {
+p {
+  line-height: 1.5em;
+  font-size: 1.1em;
+}
+
+a {
+  text-decoration: none;
+  color: #7D90CE;
+}
+
+section {
   width: 800px;
   margin: auto;
   padding: 0 5px;
 }
 
-#posts date {
+section h1 {
+  font-size: 30px;
+}
+
+#index {
+  table-layout: fixed;
+  width: 100%;
+}
+
+#index date {
   float: right;
   color: grey;
 }
 
-#posts a {
-  color: #202020;
-  text-decoration: none;
+#index td {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #7D90CE;
 }
 
-#posts ul {
-  padding: 0;
-  list-style: none;
-}
-
-
-#logo {
+header {
   text-align: center;
   font-size: 2.5em;
-  margin: 20px 0 50px 0;
+  margin: 20px 0;
 }
 
-#logo a {
+header a {
   display: block;
   color: #202020;
   text-decoration: none;
 }
 
-#logo-about {
+header a:nth-child(2) {
   font-size: 0.4em;
+}
+
+colgroup col:nth-child(2) {
+  width: 110px;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+@media (max-width: 845px) {
+  section {
+    width: 95%;
+  }
 }

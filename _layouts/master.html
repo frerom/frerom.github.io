@@ -3,14 +3,15 @@
     <head>
         <meta charset="utf-8">
         <link href="/css/style.css" rel="stylesheet">
+        <title>{{ page.title }}</title>
     </head>
     <body>
-        <div id="logo">
+        <header>
             <a href="/">frerom</a>
-            <a id="logo-about" href="/about">Who am I?</a>
-        </div>
-        <div id="content">
+            <a href="/about">Who am I?</a>
+        </header>
+        <section>
             {{ content }}
-        </div>
+        </section>
     </body>
 </html>
