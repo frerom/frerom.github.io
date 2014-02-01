@@ -13,9 +13,9 @@ Making games in the traditional way is at first straightforward, but as the code
 
 ##Components
 
-A component is an insolated state. This describes one property or behaviour of an entity, e.g a position of an entity or if the entity should be rendered and how. Should it react on keyboard input or does it move on server reponse?
+A component is an isolated state. This describes one property or behaviour of an entity, e.g a position of an entity or if the entity should be rendered and how. Should it react on keyboard input or does it move on server reponse?
 
-One very important aspect is that the component should not have any logic what so ever, so you can't store a function in your component. "Why not?" you may ask. ECS aims to separate all logic, and this will make it much easier to store your entities.
+One very important aspect is that the component should not have any logic what so ever, so you can't store a function in your component. "Why not?" you may ask. ECS aims to separate all logic from state, and this will make it much easier to store your entities.
 
 ##Entities
 
@@ -29,7 +29,7 @@ I'm thinking of implementing it with a map for the entity and its components. In
 
 {% gist 8620692 %}
 
-or evan:
+or even:
 
 {% gist 8620747 %}
 
