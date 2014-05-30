@@ -15,7 +15,7 @@ Making games in the traditional way is at first straightforward, but as the code
 
 A component is an isolated state. This describes one property or behaviour of an entity, e.g a position of an entity or if the entity should be rendered and how. Should it react on keyboard input or does it move on server reponse?
 
-One very important aspect is that the component should not have any logic what so ever, so you can't store a function in your component. "Why not?" you may ask. ECS aims to separate all logic from state, and this will make it much easier to store your entities.
+One very important aspect is that the component should not have any logic what so ever, so you can't store a function in your component. "Why not?" you may ask. ECS aims to separate all logic from state, so because the entities is nothing more than data, it will be very easy to just store all entities when for example saving a game session.
 
 ##Entities
 
@@ -41,13 +41,11 @@ The systems are the logic of the game. They are functions that changes the state
 
 A system is dependent on one or more components. For example one system might be interested in all entities that have the components **moving AI** and **position** to calculate the new position using the information in the **moving AI** component and setting it to the **position** component. So a basic system loops through every entity with a specific component and performs an act.
 
-Systems are triggered by events. An event can be anything. A key was pressed, a server response was received, the next tick in the game loop has begun.
-
 ##Events
 
 This is the concept that I have found least information about, so this i pretty much solely based on my own thoughts.
 
-An event could be anything, like a key press or a tick in the game loop. But a system should also be able to be trigger an event. So there seems to be two different kind of systems. One that acts on an event and changes state, and one that acts on an event and triggers another event. I guess a system could do both, but it doesn't feel right, it's probably better to make a system have one task.
+An event could be anything, like a key press or a tick in the game loop. And it is the systems that listens to these events. For example our render system should run when we have a new frame. But a system should also be able to be trigger an event. So there seems to be two different kind of systems. One that acts on an event and changes state, and one that acts on an event and triggers another event. I guess a system could do both, but it doesn't feel right, it's probably better to make a system have one task.
 
 I think a good example of this is a collision detector. You have a system that is triggered by a new tick in the game loop, this system might be interested in all entities with a **position** component. It checks collision against all **position** components and for every collsion it triggers an event. Then you might have different systems who listens for this event. A damage system is interested in colliding entities where one entity has a **damage** component and the other entity has a **health** component. Another system might be interested in colliding entities with a **velocity** component.
 
