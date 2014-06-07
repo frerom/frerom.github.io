@@ -3,6 +3,7 @@ layout: master
 title: frerom
 ---
 
+<h1>Posts</h1>
 <hr>
 <table id="index">
     <colgroup>
@@ -22,3 +23,34 @@ title: frerom
         {% endfor %}
     </tbody>
 </table>
+
+<h1>Games</h1>
+<hr>
+<style>
+    *, *:before, *:after {
+        box-sizing: border-box;
+    }
+    .b {
+        display: inline-block;
+        max-width: 476px;
+        min-width: 300px;
+        text-align: left;
+        vertical-align: top;
+    }
+    .c {
+        border: 1px lightgrey solid;
+        display: inline-block;
+        height: 150px;
+        width: 300px;
+
+    }
+</style>
+{% for game in site.data.games %}
+<div>
+    <div class="b">
+        <h2>{{ game.name }}</h2>
+        <p>{{ game.description }}</p>
+    </div>
+    <iframe class="c" src="https://rawgithub.com/frerom/{{ game.repo }}/master/{{ game.index }}" seamless scrolling="no"></iframe>
+</div>
+{% endfor %}

@@ -72,8 +72,16 @@ header a {
   text-decoration: none;
 }
 
-header a:nth-child(2) {
+header .small {
+  font-size: 1.2rem;
+}
+
+header .medium {
   font-size: 1.6rem;
+}
+
+header .large {
+  font-size: 4rem;
 }
 
 colgroup col:nth-child(2) {
