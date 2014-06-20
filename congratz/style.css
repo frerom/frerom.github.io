@@ -1,0 +1,38 @@
+body {
+background: url(https://lh3.googleusercontent.com/-N82PnUq-BhM/Ul3pUBS9CcI/AAAAAAAAAE0/IosgHk5WJ_8/s0-d/Brew_Thru_Beer_Background%2B%25281%2529.jpg) no-repeat top center fixed; 
+              -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+}
+
+.content {
+position: relative;
+
+background: white;
+margin: auto;
+        margin-top: 100px;
+padding: 15px;
+         max-width: 520px;
+         box-sizing: border-box;
+
+         border-radius: 10px;
+
+         text-align: center;
+         font-family: 'Niconne'
+}
+
+.content h1 {
+  font-size: 1.7em;
+}
+
+.content p {
+  font-size: 1.5em;
+}
+
+@font-face {
+  font-family: 'Niconne';
+  font-style: normal;
+  font-weight: 400;
+src: local('Niconne'), local('Niconne-Regular'), url(http://themes.googleusercontent.com/static/fonts/niconne/v4/jO_AxIHfRA1J5wF9FQemMgLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
