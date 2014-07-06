@@ -1,0 +1,34 @@
+<html>
+  <head>
+      <link href="css/404.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="text">
+      <header>
+        <span>
+          FREROM
+        </span>
+      </header>
+      <p>
+        A fatal exception 404 has occured at "{page}" in "www.frerom.com". The current web page will be terminated.
+      </p>
+      <ul>
+        <li>
+          Press any key to terminate the web page.
+        </li>
+        <li>
+          Press CTRL+ALT+DEL to restart your computer. You will lose any unsaved information in all applications.
+        </li>
+      </p>
+      <center>
+        Press any key to continue <span class="blink">_</span>
+      </center>
+    </div>
+    <script>
+      document.body.innerHTML = document.body.innerHTML.replace('{page}', window.location.pathname);
+      document.onkeypress = function () {
+        history.go(-1);
+      };
+    </script>
+  </body>
+</html>

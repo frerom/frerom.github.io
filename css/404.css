@@ -1,0 +1,81 @@
+@font-face {
+  font-family: dos;
+  src: url(dos.ttf);
+}
+body {
+  font-family: "dos";
+  color: white;
+  background: #0000AA;
+
+  padding: 10%;
+}
+
+.text {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  text-align: center;
+}
+
+header span {
+  background: lightgrey;
+  color: #0000AA;
+
+  display: inline-block;
+  padding: 1px 5px;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+li:before {
+  content: "*";
+}
+
+.blink {
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: blink;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-duration: 0.5s;
+  animation-name: blink;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
