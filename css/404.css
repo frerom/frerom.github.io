@@ -1,6 +1,6 @@
 @font-face {
   font-family: dos;
-  src: url(css/dos.ttf);
+  src: url(/css/dos.ttf);
 }
 body {
   font-family: "dos";
