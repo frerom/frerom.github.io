@@ -1,0 +1,38 @@
+body {
+  background: url(bg.jpg) no-repeat top center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+  margin: 20px;
+  padding: 20px;
+
+  background: white;
+  box-shadow: 0px 0px 5px 6px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  max-width: 400;
+
+  font-size: 1.5em;
+  font-family: 'Niconne', cursive;
+  text-align: center;
+}
+
+.button {
+  padding: 5px;
+  background: #DD4E4E;
+  text-align: center;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: #B13B3B;
+}

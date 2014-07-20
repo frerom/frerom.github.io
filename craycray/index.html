@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Niconne' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+    <div class="content">
+      <h1>Kräftfest!</h1>
+      <p>Välkommen till en traditionsenlig kräftskiva i Bergslagens skogar.</p>
+      <p>Med kräftor, snaps, västerbottenpaj och öl ska vi inviga hösten på ett sätt som bara vi kan.</p>
+      <p>Färden ut till skogarna tar plats <br>fredagen den 5 september<br> och din familj kan återse dig igen <br>söndagen den 7 september.
+      <p>Jag heter <input type="text" id="name"> och jag deltar gärna i denna festliga fest!</p>
+      <div class="button">Nice</div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script>
+    $(".button").on("click", function () {
+        $.ajax({
+          type: 'POST',
+          url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+          data: {
+            'key': '7BPxFo4tlJCrwsrHIsP-vg',
+            'message': {
+              'from_email': 'roman.fredrik@gmail.com',
+              'to': [
+                {
+                  'email': 'roman.fredrik@gmail.com',
+                  'type': 'to'
+                }
+              ],
+              'autotext': 'true',
+              'subject': 'Kräftskiva',
+              'html': $('#name').val() + " har accepterat inbjuden till festligheterna"
+            }
+          }
+        }).done(function(response) {
+          $('.button').off().text('Vi ses i de mörka skogarna!');
+        });
+    });
+</script>
+</body>
+</html>
